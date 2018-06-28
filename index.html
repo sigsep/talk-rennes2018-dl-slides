@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/lirmm.css">
 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/github.css">
 
@@ -26,11 +28,12 @@
 			<div class="slides">
 
 				<section class="cover" data-background="css/theme/img/background-red.jpg" data-background-repeat="no-repeat" data-background-size="cover" data-background-position="0 0" data-state="no-title-footer no-progressbar has-dark-background">
-					<h2 id="covertitle">HTML5 Presentation Layout</h2>
+					<h2 id="covertitle">Signal Separation Evaluation Challenge 2018</h2>
 					<h3>A nice subtitle</h3>
 					<p id="coverauthors">
-						Firstname Lastname<br />
-						firstname.lastname@inria.fr
+						fabian-robert.stoter@inria.fr<br />
+						<i class="fab fa-twitter"></i>faroit
+
 					</p>
 					<p>
 					January 25th, 2018
@@ -41,96 +44,54 @@
 
 				<section data-markdown>
 					<textarea data-template>
-						# Audio research in the Zenith team
+						# Outline
 
-						1. The KAMoulox ANR project
-						2. Two research focuses
-							- Denoising with $\alpha$-stable distributions
-							- Deep learning for music demixing
-						3. The Signal Separation Evaluation campaign
+						* Updates on Tasks
+						 * Dropped Tasks
+						 * This years Tasks
+						* Results
+							* ASY
+							* MUS
+						* <i class="fab fa-audio"></i> DEMO
+						* Tools/Reproducibility
+							* Dataset Storage
+							* Data Loaders
+							* Evaluation
+							* Submission System
+							* Presentation
+						* Outlook
+
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-						# Archives of the CNRS - Musée de l'Homme
+						# SiSEC
 
-						* French ethnologists to record world audio heritage
-						* Since 1900: 42k documents, 32k digitized
-						* From 199 countries, 1200 ethnies
-						* Users are __scientists__ in digital humanities (2600/month)
+						* Combine various tasks and report during LVA/ICA.
+						* Roughly every 1.5 year: 2008, 2011, 2013, 2015, 2017, 2018
+						* Each task is supervised by individual maintainer.
+						* Targetted at all signal separation applications
 
-						__Challenges__
-						* Most recordings are __old, degraded, noisy__, but _precious_
-						* Users are __not__ sound engineers
-						* Impossible to automatically restore __all__ entries
+=> in practice mostly in audio
 
-						__Key idea__:  <font color="orange">embed online audio restoration tools in the archives</font>
-						(ANR JCJC KAMoulox grant, 300k€)
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-						# The KAMoulox project
-						_Cutting-edge signal processing research for the audio heritage_
+						# Is Music Separation Solved?
 
-						1. __Restoration of immaterial audio heritage__ denoising, declipping, enhancement
-						2. __Repurposing of musical heritage__ demixing, remastering, resampling
-						3. __Online tools__ for scientists in digital humanities
+						<iframe width="798.1132075471698" height="493.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4AO8QbngQBvthAy4J0iRDCPiiWvYLxYUBv-bK66_sBq88lESiDW5E_NrCiI1tmwvPVz1Q6-s1I9eR/pubchart?oid=818420137&amp;format=image"></iframe>
 
-
-						### Challenges
-						* __Scale__: each of the $3.10^5$ signals is a $10^7$ samples time-series, with highly structured content
-						* __Noise__: recordings are very old, noisy and bandpass-limited
-						* __Users__: are scientists, but __non experts__
-
-
-						### Research activity
-						* __Probabilistic models__: $\alpha$-stable distributions, multichannel filtering, interpolation, extrapolation, regression
-						* __Data analysis__: deep neural networks, scalability, online processing
-						* __Community service__: international evaluation campaigns, open data & software
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-						# Denoising old recordings
-						* Noise is modelled with $\alpha$-stable stochastic processes
-						* Robust and fast inference based on moment matching and sketching
-						* A new light on some audio best practices
-						<img src="figures/steplike.png" alt="Denoising" style="float: right; width: 11em;"/>
-						> - __<font color="orange">Liutkus</font>, Badeau.__ _Generalized Wiener filtering with fractional power spectrograms._ IEEE ICASSP (2015).
-						> - __<font color="orange">Fontaine</font>, Vanwynsberghe, <font color="orange">Liutkus</font>, Badeau.__ _Sketching for nearfield acoustic imaging of heavy-tailed sources._ Springer LVA/ICA (2017).
-						> - __<font color="orange">Fontaine</font>, <font color="orange">Liutkus</font>, Girin, Badeau. __ _Explaining the parameterized Wiener filter with alpha-stable processes._ IEEE WASPAA (2017).
-					</textarea>
-				</section>
-
-				<section data-markdown>
-					<textarea data-template>
-					# Music demixing
-
-					 __Many applications__
-					 * Wide audience: active listening, karaoke
-					 * Sound engineers: remastering, resampling...
-					 * Humanities: linguistics and ethnomusicology
-
-					 __Challenges__
-					 * Inverse ill-posed problem
-					 * Diversity of music styles
-
-					 __Our expertise__
-					 * Probabilistic models for processing time-series
-					 * Machine learning research for music modeling
-
-					 > __Rafii, <font color="orange">Liutkus</font>, <font color="orange">Stöter</font>, Mimilakis, FitzGerald, Pardo__ _A Review of the research on the separation of Lead and accompaniment in music_ IEEE TASLP (2018). __overview paper__.
+						#### $\Delta$ SDR Vocals over SISEC Year
 					</textarea>
 				</section>
 
 			</div>
 			<div class='footer'>
 				<img src="css/theme/img/inria-bottom.svg" alt="Logo" />
-				<div id="middlebox">A nice loooooooooooooooooong Title</div>
+				<div id="middlebox">Signal Separation Evaluation Challenge 2018</div>
 			</div>
 		</div>
 
