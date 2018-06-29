@@ -42,51 +42,219 @@
 					<img src="css/theme/img/inria-cover.svg" id="inria" class="logo" alt="">
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						# Outline
+				<section>
+					<h1>Signal Separation Evaluation Challenge</h1>
 
-						* Updates on Tasks
-						 * Dropped Tasks
-						 * This years Tasks
-						* Results
-							* ASY
-							* MUS
-						* <i class="fab fa-audio"></i> DEMO
-						* Tools/Reproducibility
-							* Dataset Storage
-							* Data Loaders
-							* Evaluation
-							* Submission System
-							* Presentation
-						* Outlook
-
-					</textarea>
+					<ul>
+						<li>Combine various tasks and report during LVA/ICA.</li>
+						<li>Roughly every 1.5 year: 2008, 2011, 2013, 2015, 2017, 2018</li>
+						<li>Each task is supervised by individual maintainer.</li>
+						<li>Targetted at all signal separation applications</br>
+							<i class="fa fa-long-arrow-alt-right"></i> in practice mostly in audio
+						</li>
+					</ul>
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						# SiSEC
+				<section>
+					<h1>SiSEC chairs</h1>
 
-						* Combine various tasks and report during LVA/ICA.
-						* Roughly every 1.5 year: 2008, 2011, 2013, 2015, 2017, 2018
-						* Each task is supervised by individual maintainer.
-						* Targetted at all signal separation applications
-
-=> in practice mostly in audio
-
-					</textarea>
+					<ul>
+						<li>Vincent</li>
+						<li>Araki</li>
+						<li>Ono</li>
+						<li>Liutkus</li>
+						<li>Mitsufuji</li>
+					</ul>
+					<aside class="notes">
+						some notes
+					</aside>
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						# Is Music Separation Solved?
+				<section>
+					<h1>Outline</h1>
+
+					<ul>
+						<li>Tasks 2015-2018</li>
+						<li>MUS 2015-2018</li>
+						<li>Results 2018</li>
+					</ul>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+				<section>
+						<h1>SiSEC + Music = <i class="fas fa-heart"></i></i></h1>
+
+						<iframe width="842" height="520.6252912621359" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFgbx4ZkIFtUrUWQHSaL_ZmwubfFItudI3mYYtE3iHa8DTQnGjgwBBLiUJHC9UyMsBtFg11SMLcecI/pubchart?oid=746714274&amp;format=image"></iframe>
+				</section>
+
+				<section>
+					<h1>SiSEC at Scale</h1>
+
+					<table>
+						<tr>
+							<td></td>
+							<th scope="col">2007-2013</th>
+							<th scope="col">2015</th>
+							<th scope="col">2016</th>
+							<th scope="col">2018</th>
+						</tr>
+						<tr>
+							<th>Data</th>
+							<td>? 3 min</td>
+							<td style="background:lightgreen"><b>MSD:</b> 7 hours</td>
+							<td style="background:lightgreen"><b>DSD100:</b> 7 hours</td>
+							<td style="background:lightgreen"><b>MUSDB18:</b> 10 hours</td>
+						</tr>
+						<tr>
+							<th>Tools</th>
+							<td>MATLAB®</td>
+							<td>MATLAB®</td>
+							<td style="background:lightgreen">MATLAB® + <i class="fab fa-python"></i></td>
+							<td style="background:lightgreen"><i class="fab fa-python"></i> + Julia</td>
+						</tr>
+						<tr>
+							<th>Evaluation</th>
+							<td colspan=3 style="text-align:center">BSSEval v3</td>
+							<td style="background:lightgreen">BSSEval v4</td>
+						</tr>
+						<tr>
+							<th>Submission</th>
+							<td colspan=3 style="text-align:center">Manual</td>
+							<td style="background:lightgreen"><i class="fab fa-github"></i></td>
+						</tr>
+						<tr>
+							<th>Results</th>
+							<td colspan=3 style="text-align:center">Statistics</td>
+							<td style="background:lightgreen">Reproducible Notebooks</td>
+						</tr>
+
+					</table>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+				<section>
+					<h1>MUSDB18</h1>
+
+					<ul>
+						<li>100 train / 50 test tracks</li>
+						<li>Full length stereo</li>
+						<li>mastered</li>
+						<li>Converted to NI STEMS (sponsor!)</li>
+						<li>Long term storage on ZENODO</li>
+					</ul>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+				</section>
+
+					<section>
+						<h1><i class="fab fa-python"></i> musdb</h1>
+
+						<ul>
+							<li>Code snippet</li>
+						</ul>
+						<aside class="notes">
+							some notes for the presenter
+						</aside>
+
+				</section>
+
+				<section>
+					<h1><i class="fab fa-python"></i> museval</h1>
+
+					<ul>
+						<li>bssevasl v4</li>
+						<li>Plot from the paper</li>
+					</ul>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+
+				<section>
+					<h1><i class="fab fa-github"></i> Submission System</h1>
+
+					<ul>
+						<li>how did we do it</li>
+					</ul>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+				<section>
+					<h1>Results</h1>
+
+					<ul>
+						<li>Link to Colab</li>
+					</ul>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+			<!-- ----------------------------------------------------------------------------------------- -->
+
+				<section data-state="no-title-footer" data-background="grey">
+					<h1 style='color:white; font-size: 5.4em; margin-top: 3em'>DEMO</h1>
+				</section>
+
+				<section>
+					<h1>Discussion MUS</h1>
+
+					<ul>
+						<li></li>
+					</ul>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+				<section>
+
+						<h1>Is Music Separation Solved?</h1>
 
 						<iframe width="798.1132075471698" height="493.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4AO8QbngQBvthAy4J0iRDCPiiWvYLxYUBv-bK66_sBq88lESiDW5E_NrCiI1tmwvPVz1Q6-s1I9eR/pubchart?oid=818420137&amp;format=image"></iframe>
 
-						#### $\Delta$ SDR Vocals over SISEC Year
-					</textarea>
+						<h3>$\Delta$ SDR Vocals over SISEC Year</h3>
 				</section>
+
+				<section>
+					<h1>Future Directions</h1>
+
+					<ul>
+						<li></li>
+					</ul>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+				<section>
+					<h1>SiSEC Strategy</h1>
+
+					<ul>
+						<li></li>
+					</ul>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+
 
 			</div>
 			<div class='footer'>
