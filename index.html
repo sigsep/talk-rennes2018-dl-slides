@@ -59,11 +59,11 @@
 					<h1>SiSEC chairs</h1>
 
 					<ul>
-						<li>Vincent</li>
-						<li>Araki</li>
-						<li>Ono</li>
-						<li>Liutkus</li>
-						<li>Mitsufuji</li>
+						<li>2007-2010: E. Vincent</li>
+						<li>2011: S. Araki</li>
+						<li>2013-2015: N. Ono</li>
+						<li>2016-2018: Liutkus</li>
+						<li>2019-?: Y. Mitsufuji</li>
 					</ul>
 					<aside class="notes">
 						some notes
@@ -71,12 +71,12 @@
 				</section>
 
 				<section>
-					<h1>Outline</h1>
+					<h1>Outline: an overview of what happened since 2015</h1>
 
 					<ul>
-						<li>Tasks 2015-2018</li>
-						<li>MUS 2015-2018</li>
-						<li>Results 2018</li>
+						<li>Tasks in SiSEC</li>
+						<li>MUS: The professionally produced music separation task</li>
+						<li>Results for 2018</li>
 					</ul>
 					<aside class="notes">
 						some notes for the presenter
@@ -86,8 +86,13 @@
 
 				<section>
 						<h1>SiSEC + Music = <i class="fas fa-heart"></i></i></h1>
-
 						<iframe width="842" height="520.6252912621359" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFgbx4ZkIFtUrUWQHSaL_ZmwubfFItudI3mYYtE3iHa8DTQnGjgwBBLiUJHC9UyMsBtFg11SMLcecI/pubchart?oid=746714274&amp;format=image"></iframe>
+						<ul>
+							<li> Other campaigns appeared for speech separation (Chime)</li>
+							<li> Results and data for UND and BGN remain available</li>
+							<li> Only MUS and ASY kept this year</li>
+						</ul>
+
 				</section>
 
 				<section>
@@ -139,15 +144,16 @@
 				</section>
 
 				<section>
-					<h1>MUSDB18</h1>
+					<h1>MUSDB18: 10 hours of separated music</h1>
 
 					<ul>
 						<li>100 train / 50 test tracks</li>
 						<li>Full length stereo</li>
-						<li>mastered</li>
+						<li>Mastered with pro. digital audio workstations</li>
 						<li>Converted to NI STEMS (sponsor!)</li>
-						<li>Long term storage on ZENODO</li>
+						<li>Long-term storage on ZENODO</li>
 					</ul>
+					<h2><a ref=https://sigsep.github.io/datasets/musdb.html>https://sigsep.github.io/datasets/musdb.html</a></h2>
 					<aside class="notes">
 						some notes for the presenter
 					</aside>
@@ -166,12 +172,24 @@
 				</section>
 
 				<section>
-					<h1><i class="fab fa-python"></i> museval</h1>
-
+					<h1><i class="fab fa-python"></i> BSS eval v4: museval</h1>
 					<ul>
-						<li>bssevasl v4</li>
-						<li>Plot from the paper</li>
+						<li>Key issue for BSSEval v3: <b>speed</b>
+						<ul>
+							<li>Alignment of estimates and references with <i>matching filters</i></li>
+							<li>Frame-wise matching filters
+						</ul></li>
+						<li>In BSSEval v4 <i class="fab fa-python"></i>
+						<ul>
+							<li> Matching filters assumed <b>time-invariant</b> and computed <b>once</b></li>
+							<li> Trading memory for speed</li>
+							<li> 8 times faster than v3 with no significant difference</li>
+							<li> Exact compatibility with MATLAB for the --v3 mode</li>
+						</ul></li>
 					</ul>
+					<pre>
+						pip install museval
+					</pre>
 					<aside class="notes">
 						some notes for the presenter
 					</aside>
@@ -210,32 +228,39 @@
 				</section>
 
 				<section>
-					<h1>Discussion MUS</h1>
-
+					<h2> Is music separation solved? </h2>
+					<iframe width="798.1132075471698" height="493.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4AO8QbngQBvthAy4J0iRDCPiiWvYLxYUBv-bK66_sBq88lESiDW5E_NrCiI1tmwvPVz1Q6-s1I9eR/pubchart?oid=818420137&amp;format=image"></iframe>
 					<ul>
-						<li></li>
+						<li> Before 2015: No systematic improvement for MUS</li>
+						<li> 2015: very challenging edition
+							<ul>
+								<li> From overfitted 3mn to larger scale 3.5h of test data</li>
+								<li> Vocals under-mixed in MSD100 (fixed for musdb)</li>
+							</ul></li>
+						<li> 2016-2018: steady and systematic improvement</li>
 					</ul>
+					What are the remaining challenges today ?
 					<aside class="notes">
-						some notes for the presenter
+						<ul>
+							<li> I suggest you modify the figure to include a dashed-line between 2013 and 2015. On its left: 3mn data, on its right: 7.5 hours data.</li>
+							<li> You may modify the y-label for something more explicit, like "Average scores vs oracle (dB)"
 					</aside>
 
 				</section>
 
 				<section>
+					<h1>Future Directions for audio separation research</h1>
 
-						<h1>Is Music Separation Solved?</h1>
-
-						<iframe width="798.1132075471698" height="493.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4AO8QbngQBvthAy4J0iRDCPiiWvYLxYUBv-bK66_sBq88lESiDW5E_NrCiI1tmwvPVz1Q6-s1I9eR/pubchart?oid=818420137&amp;format=image"></iframe>
-
-						<h3>$\Delta$ SDR Vocals over SISEC Year</h3>
-				</section>
-
-				<section>
-					<h1>Future Directions</h1>
-
+					Deep learning brought an important breakthrough in 3 years
 					<ul>
-						<li></li>
+						<li>Performance for music separation is getting close to oracles</br>
+								<i class="fa fa-long-arrow-alt-right"></i> Design new models (oracles) and/or new metrics ?</li>
+						<li> Is it more important to build better models or to get more data ?</br>
+							<i class="fa fa-long-arrow-alt-right"></i> Train with limited data</br>
+							<i class="fa fa-long-arrow-alt-right"></i> Evaluate models vs the amount of training data?</br>
+						</li>
 					</ul>
+
 					<aside class="notes">
 						some notes for the presenter
 					</aside>
@@ -246,8 +271,13 @@
 					<h1>SiSEC Strategy</h1>
 
 					<ul>
-						<li></li>
+						<li>Only MUS was strongly developed in the recent years</br>
+								<i class="fa fa-long-arrow-alt-right"></i> Propose new tasks?</li>
+						<li> Audio is still the core topic of SiSEC</br>
+								<i class="fa fa-long-arrow-alt-right"></i> Are there other applicative domains for separation?</li>
 					</ul>
+
+					<p>Up to the community! You!
 					<aside class="notes">
 						some notes for the presenter
 					</aside>
