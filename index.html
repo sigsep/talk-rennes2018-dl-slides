@@ -85,7 +85,7 @@
 				</section>
 
 				<section>
-						<h1>SiSEC + Music = <i class="fas fa-heart"></i></i></h1>
+						<h1>SiSEC + <strike>Music</strike> DNNs = <i class="fas fa-heart"></i></i></h1>
 						<ul>
 							<li> Other campaigns appeared for speech separation (Chime)</li>
 							<li> Results and data for UND and BGN remain available</li>
@@ -213,6 +213,7 @@ mus.run(my_function, estimates_dir="path/to/estimates")
 							<li> Trading memory for speed</li>
 							<li> 8 times faster than v3 with no significant difference</li>
 							<li> Exact compatibility with MATLAB for the --v3 mode</li>
+							<li> Scores saved in standardized JSON files</li>
 						</ul></li>
 					</ul>
 					<h2 style="font-family: monospace"><i class="fab fa-python"></i> museval</h2>
@@ -225,10 +226,13 @@ mus.run(my_function, estimates_dir="path/to/estimates")
 
 
 				<section>
-					<h1><i class="fab fa-github"></i> Submission System</h1>
+					<h1><i class="fab fa-github"></i> Sustainable Submission System</h1>
 
 					<ul>
-						<li>how did we do it</li>
+						<li>Automated open source system using Github </li>
+						<li>Collecting Objective Scores via Pull Requests</li>
+						<li>Using unit test to verify results using Travis CI</li>
+						<li>Allow participants to add references and descriptions</li>
 					</ul>
 					<aside class="notes">
 						some notes for the presenter
@@ -237,10 +241,22 @@ mus.run(my_function, estimates_dir="path/to/estimates")
 				</section>
 
 				<section>
-					<h1>Results</h1>
+					<h1 style='font-size: 2.4em; margin-left: 1em; margin-top: 1em'>Objective Evaluation
+					</h1>
+					<ul>
+						<li><a href="https://drive.google.com/file/d/1DoGm0WizK_jmgdo1lSVAQRTMESNr6IyO/view?usp=sharing">Google Colab</a></li>
+						<li><a href="https://github.com/sigsep/sigsep-mus-2018-analysis/blob/master/museval18_analysis.ipynb">Jupyter Notebook</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1><i class="fab fa-github"></i> Sustainable Submission System</h1>
 
 					<ul>
-						<li>Link to Colab</li>
+						<li>Automated open source system using Github </li>
+						<li>Collecting Objective Scores via Pull Requests</li>
+						<li>Using unit test to verify results using Travis CI</li>
+						<li>Allow participants to add references and descriptions</li>
 					</ul>
 					<aside class="notes">
 						some notes for the presenter
@@ -248,32 +264,35 @@ mus.run(my_function, estimates_dir="path/to/estimates")
 
 				</section>
 
-			<!-- ----------------------------------------------------------------------------------------- -->
-
-				<section data-state="no-title-footer" data-background="darkred">
-					<h1 style='color:white; font-size: 8.4em; margin-top: 1em'><i class="fa fa-volume-up"></i></h1>
-				</section>
-
 				<section>
-					<h2> Is music separation solved? </h2>
-					<iframe width="798.1132075471698" height="493.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4AO8QbngQBvthAy4J0iRDCPiiWvYLxYUBv-bK66_sBq88lESiDW5E_NrCiI1tmwvPVz1Q6-s1I9eR/pubchart?oid=818420137&amp;format=image"></iframe>
+					<h2> Top Systems compared to last SiSECs </h2>
+					<iframe width="798.1132075471698" height="300.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4AO8QbngQBvthAy4J0iRDCPiiWvYLxYUBv-bK66_sBq88lESiDW5E_NrCiI1tmwvPVz1Q6-s1I9eR/pubchart?oid=818420137&amp;format=image"></iframe>
 					<ul>
 						<li> Before 2015: No systematic improvement for MUS</li>
 						<li> 2015: very challenging edition
 							<ul>
 								<li> From overfitted 3mn to larger scale 3.5h of test data</li>
-								<li> Vocals under-mixed in MSD100 (fixed for musdb)</li>
+								<li> Vocals under-mixed in MSD100 (fixed for MUSDB18)</li>
 							</ul></li>
 						<li> 2016-2018: steady and systematic improvement</li>
 					</ul>
-					What are the remaining challenges today ?
 					<aside class="notes">
 						<ul>
 							<li> I suggest you modify the figure to include a dashed-line between 2013 and 2015. On its left: 3mn data, on its right: 7.5 hours data.</li>
 							<li> You may modify the y-label for something more explicit, like "Average scores vs oracle (dB)"
 					</aside>
-
 				</section>
+
+			<section data-state="no-title-footer" data-background="#232323">
+				<h1 style='color:white; font-size: 2.4em; margin-top: 3em; margin-left: 1em'>
+					Is music separation </br>solved?
+				</h1>
+			</section>
+
+			<section data-state="no-title-footer" data-background="darkred">
+				<h1 style='color:white; font-size: 3.4em; margin-top: 2em;  margin-left: 1em'>Lets find out</br><i class="fa fa-volume-up"></i></h1>
+			</section>
+
 
 				<section>
 					<h1>Future Directions for audio separation research</h1>
@@ -333,7 +352,7 @@ mus.run(my_function, estimates_dir="path/to/estimates")
 				history: true,
 				center: false,
 				slideNumber: true,
-				minScale: 0.1,
+				minScale: 1,
 				maxScale: 5,
 				transition: 'none', //
 
