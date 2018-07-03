@@ -86,17 +86,20 @@
 
 				<section>
 						<h1>SiSEC + Music = <i class="fas fa-heart"></i></i></h1>
-						<iframe width="842" height="520.6252912621359" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFgbx4ZkIFtUrUWQHSaL_ZmwubfFItudI3mYYtE3iHa8DTQnGjgwBBLiUJHC9UyMsBtFg11SMLcecI/pubchart?oid=746714274&amp;format=image"></iframe>
 						<ul>
 							<li> Other campaigns appeared for speech separation (Chime)</li>
 							<li> Results and data for UND and BGN remain available</li>
 							<li> Only MUS and ASY kept this year</li>
 						</ul>
+						<iframe width="720" height="520.6252912621359" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFgbx4ZkIFtUrUWQHSaL_ZmwubfFItudI3mYYtE3iHa8DTQnGjgwBBLiUJHC9UyMsBtFg11SMLcecI/pubchart?oid=746714274&amp;format=image"></iframe>
+				</section>
 
+				<section data-state="no-title-footer"  data-background-image="assets/hero_header.svg" data-background-size="80%">
+					<h1>MUS</h1>
 				</section>
 
 				<section>
-					<h1>SiSEC at Scale</h1>
+					<h1>SiSEC MUS at Scale</h1>
 
 					<table>
 						<tr>
@@ -150,21 +153,46 @@
 						<li>100 train / 50 test tracks</li>
 						<li>Full length stereo</li>
 						<li>Mastered with pro. digital audio workstations</li>
-						<li>Converted to NI STEMS (sponsor!)</li>
+						<li>Converted to NI STEMS</li>
 						<li>Long-term storage on ZENODO</li>
+						<li><a ref=https://sigsep.github.io/datasets/musdb.html>https://sigsep.github.io/datasets/musdb.html</a></li>
 					</ul>
-					<h2><a ref=https://sigsep.github.io/datasets/musdb.html>https://sigsep.github.io/datasets/musdb.html</a></h2>
+					<img width="320px" style="float: right" src="assets/stems.png" alt="">
+					<img width="700px" src="assets/hero.svg" alt="">
 					<aside class="notes">
 						some notes for the presenter
 					</aside>
 				</section>
 
 					<section>
-						<h1><i class="fab fa-python"></i> musdb</h1>
+						<h1>I/O Tools</h1>
+						<h2 style="font-family: monospace"><i class="fab fa-python"></i> musdb</h2>
 
 						<ul>
-							<li>Code snippet</li>
+							<li>Parsing/Decoding stems</li>
 						</ul>
+<pre><code data-trim data-noescape>
+import musdb
+
+def my_function(track):
+    '''Mix as estimate'''
+
+    # return any number of targets
+    estimates = {
+        'vocals': track.audio,
+        'accompaniment': track.audio,
+    }
+    return estimates
+
+# initiate musdb
+mus = musdb.DB(root_dir="./Volumes/Data/musdb")
+
+# this might take 3 days to finish
+mus.run(my_function, estimates_dir="path/to/estimates")
+</code></pre>
+<h2 style="font-family: monospace"><i class="fab fa-python"></i> stempeg</h2>
+<h2 style="font-family: monospace"><i class="fab fa-python"></i> docker tools</h2>
+
 						<aside class="notes">
 							some notes for the presenter
 						</aside>
@@ -187,9 +215,8 @@
 							<li> Exact compatibility with MATLAB for the --v3 mode</li>
 						</ul></li>
 					</ul>
-					<pre>
-						pip install museval
-					</pre>
+					<h2 style="font-family: monospace"><i class="fab fa-python"></i> museval</h2>
+
 					<aside class="notes">
 						some notes for the presenter
 					</aside>
@@ -223,8 +250,8 @@
 
 			<!-- ----------------------------------------------------------------------------------------- -->
 
-				<section data-state="no-title-footer" data-background="grey">
-					<h1 style='color:white; font-size: 5.4em; margin-top: 3em'>DEMO</h1>
+				<section data-state="no-title-footer" data-background="darkred">
+					<h1 style='color:white; font-size: 8.4em; margin-top: 1em'><i class="fa fa-volume-up"></i></h1>
 				</section>
 
 				<section>
