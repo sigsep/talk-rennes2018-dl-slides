@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/lirmm.css">
 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/github.css">
 
@@ -26,111 +28,307 @@
 			<div class="slides">
 
 				<section class="cover" data-background="css/theme/img/background-red.jpg" data-background-repeat="no-repeat" data-background-size="cover" data-background-position="0 0" data-state="no-title-footer no-progressbar has-dark-background">
-					<h2 id="covertitle">HTML5 Presentation Layout</h2>
+					<h2 id="covertitle">Signal Separation Evaluation Challenge 2018</h2>
 					<h3>A nice subtitle</h3>
 					<p id="coverauthors">
-						Firstname Lastname<br />
-						firstname.lastname@inria.fr
+						fabian-robert.stoter@inria.fr<br />
+						<i class="fab fa-twitter"></i>faroit
+
 					</p>
 					<p>
-					January 25th, 2018
+					July 3rd, 2018
 					</p>
 					<p>
 					<img src="css/theme/img/inria-cover.svg" id="inria" class="logo" alt="">
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						# Audio research in the Zenith team
+				<section>
+					<h1>Signal Separation Evaluation Challenge</h1>
 
-						1. The KAMoulox ANR project
-						2. Two research focuses
-							- Denoising with $\alpha$-stable distributions
-							- Deep learning for music demixing
-						3. The Signal Separation Evaluation campaign
-					</textarea>
+					<ul>
+						<li>Combine various tasks and report during LVA/ICA.</li>
+						<li>Roughly every 1.5 year: 2008, 2011, 2013, 2015, 2017, 2018</li>
+						<li>Each task is supervised by individual maintainer.</li>
+						<li>Targetted at all signal separation applications</br>
+							<i class="fa fa-long-arrow-alt-right"></i> in practice mostly in audio
+						</li>
+					</ul>
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						# Archives of the CNRS - Musée de l'Homme
+				<section>
+					<h1>SiSEC chairs</h1>
 
-						* French ethnologists to record world audio heritage
-						* Since 1900: 42k documents, 32k digitized
-						* From 199 countries, 1200 ethnies
-						* Users are __scientists__ in digital humanities (2600/month)
-
-						__Challenges__
-						* Most recordings are __old, degraded, noisy__, but _precious_
-						* Users are __not__ sound engineers
-						* Impossible to automatically restore __all__ entries
-
-						__Key idea__:  <font color="orange">embed online audio restoration tools in the archives</font>
-						(ANR JCJC KAMoulox grant, 300k€)
-					</textarea>
+					<ul>
+						<li>2007-2010: E. Vincent</li>
+						<li>2011: S. Araki</li>
+						<li>2013-2015: N. Ono</li>
+						<li>2016-2018: A. Liutkus</li>
+						<li>2019-?: Y. Mitsufuji</li>
+					</ul>
+					<aside class="notes">
+						some notes
+					</aside>
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						# The KAMoulox project
-						_Cutting-edge signal processing research for the audio heritage_
+				<section>
+					<h1>Outline: an overview of what happened since 2015</h1>
 
-						1. __Restoration of immaterial audio heritage__ denoising, declipping, enhancement
-						2. __Repurposing of musical heritage__ demixing, remastering, resampling
-						3. __Online tools__ for scientists in digital humanities
+					<ul>
+						<li>Tasks in SiSEC</li>
+						<li>MUS: The professionally produced music separation task</li>
+						<li>Results for 2018</li>
+					</ul>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
 
-
-						### Challenges
-						* __Scale__: each of the $3.10^5$ signals is a $10^7$ samples time-series, with highly structured content
-						* __Noise__: recordings are very old, noisy and bandpass-limited
-						* __Users__: are scientists, but __non experts__
-
-
-						### Research activity
-						* __Probabilistic models__: $\alpha$-stable distributions, multichannel filtering, interpolation, extrapolation, regression
-						* __Data analysis__: deep neural networks, scalability, online processing
-						* __Community service__: international evaluation campaigns, open data & software
-					</textarea>
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						# Denoising old recordings
-						* Noise is modelled with $\alpha$-stable stochastic processes
-						* Robust and fast inference based on moment matching and sketching
-						* A new light on some audio best practices
-						<img src="figures/steplike.png" alt="Denoising" style="float: right; width: 11em;"/>
-						> - __<font color="orange">Liutkus</font>, Badeau.__ _Generalized Wiener filtering with fractional power spectrograms._ IEEE ICASSP (2015).
-						> - __<font color="orange">Fontaine</font>, Vanwynsberghe, <font color="orange">Liutkus</font>, Badeau.__ _Sketching for nearfield acoustic imaging of heavy-tailed sources._ Springer LVA/ICA (2017).
-						> - __<font color="orange">Fontaine</font>, <font color="orange">Liutkus</font>, Girin, Badeau. __ _Explaining the parameterized Wiener filter with alpha-stable processes._ IEEE WASPAA (2017).
-					</textarea>
+				<section>
+						<h1>SiSEC + Music (+ DNNs) = <i class="fas fa-heart"></i></i></h1>
+						<ul>
+							<li> Other campaigns appeared for speech separation (Chime)</li>
+							<li> Results and data for UND and BGN remain available</li>
+							<li> Only MUS and ASY kept this year</li>
+						</ul>
+						<iframe width="720" height="520.6252912621359" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFgbx4ZkIFtUrUWQHSaL_ZmwubfFItudI3mYYtE3iHa8DTQnGjgwBBLiUJHC9UyMsBtFg11SMLcecI/pubchart?oid=746714274&amp;format=image"></iframe>
 				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-					# Music demixing
-
-					 __Many applications__
-					 * Wide audience: active listening, karaoke
-					 * Sound engineers: remastering, resampling...
-					 * Humanities: linguistics and ethnomusicology
-
-					 __Challenges__
-					 * Inverse ill-posed problem
-					 * Diversity of music styles
-
-					 __Our expertise__
-					 * Probabilistic models for processing time-series
-					 * Machine learning research for music modeling
-
-					 > __Rafii, <font color="orange">Liutkus</font>, <font color="orange">Stöter</font>, Mimilakis, FitzGerald, Pardo__ _A Review of the research on the separation of Lead and accompaniment in music_ IEEE TASLP (2018). __overview paper__.
-					</textarea>
+				<section data-state="no-title-footer"  data-background-image="assets/ASY.svg" data-background-size="50%">
+					<h1>ASY: Asynchronous Recordings of Speech Mixtures</h1>
+					See the poster by Ryan Corey
 				</section>
+
+				<section data-state="no-title-footer"  data-background-image="assets/hero_header.svg" data-background-size="80%">
+					<h1>MUS</h1>
+				</section>
+
+				<section>
+					<h1>SiSEC MUS at Scale</h1>
+
+					<table>
+						<tr>
+							<td></td>
+							<th scope="col">2007-2013</th>
+							<th scope="col">2015</th>
+							<th scope="col">2016</th>
+							<th scope="col">2018</th>
+						</tr>
+						<tr>
+							<th>Data</th>
+							<td>? 3 min</td>
+							<td style="background:lightgreen"><b>MSD:</b> 7 hours</td>
+							<td style="background:lightgreen"><b>DSD100:</b> 7 hours</td>
+							<td style="background:lightgreen"><b>MUSDB18:</b> 10 hours</td>
+						</tr>
+						<tr>
+							<th>Tools</th>
+							<td>MATLAB®</td>
+							<td>MATLAB®</td>
+							<td style="background:lightgreen">MATLAB® + <i class="fab fa-python"></i></td>
+							<td style="background:lightgreen"><i class="fab fa-python"></i> + Julia</td>
+						</tr>
+						<tr>
+							<th>Evaluation</th>
+							<td colspan=3 style="text-align:center">BSSEval v3</td>
+							<td style="background:lightgreen">BSSEval v4</td>
+						</tr>
+						<tr>
+							<th>Submission</th>
+							<td colspan=3 style="text-align:center">Manual</td>
+							<td style="background:lightgreen"><i class="fab fa-github"></i></td>
+						</tr>
+						<tr>
+							<th>Results</th>
+							<td colspan=3 style="text-align:center">Statistics</td>
+							<td style="background:lightgreen">Reproducible Notebooks</td>
+						</tr>
+
+					</table>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+				<section>
+					<h1>MUSDB18: 10 hours of separated music</h1>
+
+					<ul>
+						<li>100 train / 50 test tracks</li>
+						<li>Full length stereo</li>
+						<li>Mastered with pro. digital audio workstations</li>
+						<li>Converted to NI STEMS</li>
+						<li>Long-term storage on ZENODO</li>
+						<li><a ref=https://sigsep.github.io/datasets/musdb.html>https://sigsep.github.io/datasets/musdb.html</a></li>
+					</ul>
+					<img width="320px" style="float: right" src="assets/stems.png" alt="">
+					<img width="700px" src="assets/hero.svg" alt="">
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+				</section>
+
+					<section>
+						<h1>I/O Tools</h1>
+						<h2 style="font-family: monospace"><i class="fab fa-python"></i> musdb</h2>
+
+						<ul>
+							<li>Parsing/Decoding stems</li>
+						</ul>
+<pre><code data-trim data-noescape>
+import musdb
+
+def my_function(track):
+    '''Mix as estimate'''
+
+    # return any number of targets
+    estimates = {
+        'vocals': track.audio,
+        'accompaniment': track.audio,
+    }
+    return estimates
+
+# initiate musdb
+mus = musdb.DB(root_dir="./Volumes/Data/musdb")
+
+# this might take 3 days to finish
+mus.run(my_function, estimates_dir="path/to/estimates")
+</code></pre>
+<h2 style="font-family: monospace"><i class="fab fa-python"></i> stempeg</h2>
+<h2 style="font-family: monospace"><i class="fab fa-python"></i> docker tools</h2>
+
+						<aside class="notes">
+							some notes for the presenter
+						</aside>
+
+				</section>
+
+				<section>
+					<h1><i class="fab fa-python"></i> BSS eval v4: museval</h1>
+					<ul>
+						<li>Key issue for BSSEval v3: <b>speed</b>
+						<ul>
+							<li>Alignment of estimates and references with <i>matching filters</i></li>
+							<li>Frame-wise matching filters
+						</ul></li>
+						<li>In BSSEval v4 <i class="fab fa-python"></i>
+						<ul>
+							<li> Matching filters assumed <b>time-invariant</b> and computed <b>once</b></li>
+							<li> Trading memory for speed</li>
+							<li> 8 times faster than v3 with no significant difference</li>
+							<li> Exact compatibility with MATLAB for the --v3 mode</li>
+							<li> Scores saved in standardized JSON files</li>
+						</ul></li>
+					</ul>
+					<h2 style="font-family: monospace"><i class="fab fa-python"></i> museval</h2>
+
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+
+				<section>
+					<h1><i class="fab fa-github"></i> Sustainable Submission System</h1>
+
+					<ul>
+						<li>Automated open source system using Github </li>
+						<li>Collecting Objective Scores via Pull Requests</li>
+						<li>Using unit test to verify results using Travis CI</li>
+						<li>Allow participants to add references and descriptions</li>
+					</ul>
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+				<section>
+					<h1 style='font-size: 2.4em; margin-left: 1em; margin-top: 1em'>Objective Evaluation
+					</h1>
+					<ul>
+						<li><a href="https://drive.google.com/file/d/1DoGm0WizK_jmgdo1lSVAQRTMESNr6IyO/view?usp=sharing">Google Colab</a></li>
+						<li><a href="https://github.com/sigsep/sigsep-mus-2018-analysis/blob/master/museval18_analysis.ipynb">Jupyter Notebook</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2> Top Systems compared to last SiSECs </h2>
+					<iframe width="798.1132075471698" height="300.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4AO8QbngQBvthAy4J0iRDCPiiWvYLxYUBv-bK66_sBq88lESiDW5E_NrCiI1tmwvPVz1Q6-s1I9eR/pubchart?oid=818420137&amp;format=image"></iframe>
+					<ul>
+						<li> Before 2015: No systematic improvement for MUS</li>
+						<li> 2015: very challenging edition
+							<ul>
+								<li> From overfitted 3mn to larger scale 3.5h of test data</li>
+								<li> Vocals under-mixed in MSD100 (fixed for MUSDB18)</li>
+							</ul></li>
+						<li> 2016-2018: steady and systematic improvement</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li> I suggest you modify the figure to include a dashed-line between 2013 and 2015. On its left: 3mn data, on its right: 7.5 hours data.</li>
+							<li> You may modify the y-label for something more explicit, like "Average scores vs oracle (dB)"
+					</aside>
+				</section>
+
+			<section data-state="no-title-footer" data-background="#232323">
+				<h1 style='color:white; font-size: 2.4em; margin-top: 3em; margin-left: 1em'>
+					Is music separation </br>solved?
+				</h1>
+			</section>
+
+			<section data-state="no-title-footer" data-background="darkred">
+				<h1 style='color:white; font-size: 3.4em; margin-top: 2em;  margin-left: 1em'>Lets find out</br><i class="fa fa-volume-up"></i></h1>
+			</section>
+
+
+				<section>
+					<h1>Future Directions for audio separation research</h1>
+
+					Deep learning brought an important breakthrough in 3 years
+					<ul>
+						<li>Performance for music separation is getting close to oracles</br>
+								<i class="fa fa-long-arrow-alt-right"></i> Design new models (oracles) and/or new metrics ?</li>
+						<li> Is it more important to build better models or to get more data ?</br>
+							<i class="fa fa-long-arrow-alt-right"></i> Train with limited data</br>
+							<i class="fa fa-long-arrow-alt-right"></i> Evaluate models vs the amount of training data?</br>
+						</li>
+					</ul>
+
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+				<section>
+					<h1>SiSEC Strategy</h1>
+
+					<ul>
+						<li>Only MUS was strongly developed in the recent years</br>
+								<i class="fa fa-long-arrow-alt-right"></i> Propose new tasks?</li>
+						<li> Audio is still the core topic of SiSEC</br>
+								<i class="fa fa-long-arrow-alt-right"></i> Are there other applicative domains for separation?</li>
+					</ul>
+
+					<aside class="notes">
+						some notes for the presenter
+					</aside>
+
+				</section>
+
+				<section>
+					<h1 style="margin-top:6em">Website: <a href="sisec18.unmix.app">sisec18.unmix.app</a></h1>
+
+				</section>
+
 
 			</div>
 			<div class='footer'>
 				<img src="css/theme/img/inria-bottom.svg" alt="Logo" />
-				<div id="middlebox">A nice loooooooooooooooooong Title</div>
+				<div id="middlebox">Signal Separation Evaluation Challenge 2018</div>
 			</div>
 		</div>
 
@@ -147,7 +345,7 @@
 				history: true,
 				center: false,
 				slideNumber: true,
-				minScale: 0.1,
+				minScale: 1,
 				maxScale: 5,
 				transition: 'none', //
 
