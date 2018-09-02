@@ -414,11 +414,11 @@ body {
   font-size: 1em; }
 
 .reveal .cover {
-  padding-top: 8em !important;
+
   color: white; }
 
 .reveal .cover h1, h2, h3 {
-  margin-top: 2em; }
+  margin-top: 4em !important;}
 
 .reveal .cover img#inria {
   border: none;
