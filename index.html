@@ -28,78 +28,186 @@
 			<div class="slides">
 
 				<section class="cover" data-background="css/theme/img/background-red.jpg" data-background-repeat="no-repeat" data-background-size="cover" data-background-position="0 0" data-state="no-title-footer no-progressbar has-dark-background">
-					<h2 id="covertitle">Signal Separation Evaluation Challenge 2018</h2>
+					<h2 id="covertitle">Deep Learning for Music Unmixing</h2>
 					<p id="coverauthors">
-						fabian-robert.stoter@inria.fr<br />
-						<i class="fab fa-twitter"></i>faroit
+						Fabian-Robert Stöter & Antoine Liutkus<br/>
+						INRIA and LIRMM, Montpellier<br/>
+
+						<p>
+							fabian-robert.stoter@inria.fr<br />
+							<i class="fab fa-twitter"></i>faroit
+						</p>
 
 					</p>
 					<p>
-					July 3rd, 2018
+					September 5th, 2018
 					</p>
 					<p>
 					<img src="css/theme/img/inria-cover.svg" id="inria" class="logo" alt="">
 				</section>
 
 				<section>
-					<h1>Deep Learning for Music Unmixing</h1>
+					<h1>Music Source Separation</h1>
+					<img class="fragment" width="45%" style="float:left" src="assets/intro1.png" alt="">
+					<img class="fragment" width="45%" src="assets/intro2.png" alt="">
+				</section>
 
+				<section>
+					<h1>Applications</h1>
 					<ul>
-						<li>Combine various tasks and report during LVA/ICA.</li>
-						<li>Roughly every 1.5 year: 2008, 2011, 2013, 2015, 2017, 2018</li>
-						<li>Each task is supervised by individual maintainer.</li>
-						<li>Targetted at all signal separation applications</br>
-							<i class="fa fa-long-arrow-alt-right"></i> in practice mostly in audio
-						</li>
+						<li>Automatic Karaoke</li>
+						<li>Creative Music Production</li>
+						<li>Personal Remixing</li>
+						<li>Music Education</li>
+						<li>...</li>
 					</ul>
 				</section>
 
 				<section>
-					<h1>SiSEC chairs</h1>
+					<h1>Classical Approaches</h1>
 
 					<ul>
-						<li>2007-2010: E. Vincent</li>
-						<li>2011: S. Araki</li>
-						<li>2013-2015: N. Ono</li>
-						<li>2016-2018: A. Liutkus</li>
-						<li>2019-?: Y. Mitsufuji</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Non-negative matrix factorization (NMF)</h1>
+					<img style="float:left" src="https://docs.google.com/drawings/d/e/2PACX-1vS1JrZuBXyzbaLEpt_ekUHVqENMcUWZkDjvhWvQSpN4vdUAr2asfRZzL471bpoUhbSNTN7b1nPojviG/pub?w=406&h=547" alt="">
+
+					<ul>
 					</ul>
 					<aside class="notes">
-						some notes
+						We consider the identification of redundancy in the accompaniment through the assumption that its spectrogram may be well represented by only a few components. Techniques exploiting this idea then focus on algebraic methods that decompose the mixture spectrogram into the product of a few template spectra activated over time. One way to do so is via non-negative matrix factorization (NMF) [90], [91], which incorporates non-negative constraints.
 					</aside>
 				</section>
 
 				<section>
-					<h1>Outline: an overview of what happened since 2015</h1>
+					<h1>Repetition Detection</h1>
+					<img style="float:left" src="https://docs.google.com/drawings/d/e/2PACX-1vTsnQlO0NWOqGKwG1ksYtD8oYpf2exFzCkHV6pX5COfgGCmJVNhl3E64qcgoq3dJwdapgK9eXltAUIH/pub?w=720" alt="">
 
 					<ul>
-						<li>Tasks in SiSEC</li>
-						<li>MUS: The professionally produced music separation task</li>
-						<li>Results for 2018</li>
 					</ul>
 					<aside class="notes">
-						some notes for the presenter
+						he approaches based on a repetition assumption for accompaniment. In a first analysis step, repetitions are identified. Then, they are used to build an estimate for the accompaniment spectrogram and proceed to separation.
 					</aside>
+				</section>
+
+				<section>
+					<h1>Limitations</h1>
+
+					<ul>
+						<li></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Paradigma shift</h1>
+					<ul>
+						<li>when?</li>
+						<li>why? data, separation is only well defined for certain kind of data</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Datasets</h1>
+					<table><thead><tr><th><strong>Dataset</strong></th><th><strong>Year</strong></th><th><strong>Reference(s)</strong></th><th><strong>Tracks</strong></th><th><strong>Duration</strong></th><th><strong>Full/stereo?</strong></th></tr></thead><tbody><tr><td><a href="http://www.mtg.upf.edu/download/datasets/mass" target="_blank" rel="noopener noreferrer">MASS<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></td><td>2008</td><td>(Vinyes 2008)</td><td>9</td><td>(16 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo></mrow><annotation encoding="application/x-tex">\pm</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height: 0.58333em;"></span><span class="strut bottom" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="base"><span class="mord">±</span></span></span></span> 7)</td><td>❌ / ✔️</td></tr><tr><td><a href="https://sites.google.com/site/unvoicedsoundseparation/mir-1k" target="_blank" rel="noopener noreferrer">MIR-1K<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></td><td>2010</td><td>(Hsu and Jang 2010)</td><td>1,000</td><td>(8 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo></mrow><annotation encoding="application/x-tex">\pm</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height: 0.58333em;"></span><span class="strut bottom" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="base"><span class="mord">±</span></span></span></span> 8)</td><td>❌ / ❌</td></tr><tr><td><a href="http://www.tsi.telecom-paristech.fr/aao/en/2012/03/12/quasi/" target="_blank" rel="noopener noreferrer">QUASI<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></td><td>2011</td><td>(Liutkus et. al. 2011)</td><td>5</td><td>(206 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo></mrow><annotation encoding="application/x-tex">\pm</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height: 0.58333em;"></span><span class="strut bottom" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="base"><span class="mord">±</span></span></span></span> 21)</td><td>✔️ / ✔️</td></tr><tr><td><a href="http://www.loria.fr/~aliutkus/kam/" target="_blank" rel="noopener noreferrer">ccMixter<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></td><td>2014</td><td>(Liutkus et al. 2014)</td><td>50</td><td>(231 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo></mrow><annotation encoding="application/x-tex">\pm</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height: 0.58333em;"></span><span class="strut bottom" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="base"><span class="mord">±</span></span></span></span> 77)</td><td>✔️ / ✔️</td></tr><tr><td><a href="http://medleydb.weebly.com/" target="_blank" rel="noopener noreferrer">MedleyDB<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></td><td>2014</td><td>(Bittner et al. 2014)</td><td>63</td><td>(206 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo></mrow><annotation encoding="application/x-tex">\pm</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height: 0.58333em;"></span><span class="strut bottom" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="base"><span class="mord">±</span></span></span></span> 121)</td><td>✔️ / ✔️</td></tr><tr><td><a href="http://mac.citi.sinica.edu.tw/ikala/" target="_blank" rel="noopener noreferrer">iKala<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></td><td>2015</td><td>(Chan et al. 2015)</td><td>206</td><td>30</td><td>❌ / ❌</td></tr><tr><td><a href="/datasets/dsd100.html" class="">DSD100</a><span class="badge"></span></td><td>2015</td><td>(Ono et al. 2015)</td><td>100</td><td>(251 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo></mrow><annotation encoding="application/x-tex">\pm</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height: 0.58333em;"></span><span class="strut bottom" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="base"><span class="mord">±</span></span></span></span> 60)</td><td>✔️ / ✔️</td></tr><tr><td><a href="/datasets/musdb.html" class="">MUSDB18</a></td><td>2017</td><td>(Rafii et al. 2017)</td><td>150</td><td>(236 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo></mrow><annotation encoding="application/x-tex">\pm</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height: 0.58333em;"></span><span class="strut bottom" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="base"><span class="mord">±</span></span></span></span> 95)</td><td>✔️ / ✔️</td></tr></tbody></table>
+				</section>
+
+				<section>
+					<h1>Supervised Music Separation</h1>
+					<h2>Classification vs Regression</h2>
+
+					<img width="66%" src="assets/binarymasking.svg" alt="">
+					<ul>
+						<li>Binary Masking</li>
+					</ul>
+
+					<img width="66%" src="assets/softmask.svg" alt="">
+					<ul>
+						<li>Softmask</li>
+					</ul>
+
+					<img width="66%" src="assets/direct.svg" alt="">
+					<ul>
+						<li>Magnitude Spectrogram</li>
+					</ul>
 
 				</section>
 
 				<section>
-						<h1>SiSEC + Music (+ DNNs) = <i class="fas fa-heart"></i></i></h1>
-						<ul>
-							<li> Other campaigns appeared for speech separation (Chime)</li>
-							<li> Results and data for UND and BGN remain available</li>
-							<li> Only MUS and ASY kept this year</li>
-						</ul>
-						<iframe width="720" height="520.6252912621359" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFgbx4ZkIFtUrUWQHSaL_ZmwubfFItudI3mYYtE3iHa8DTQnGjgwBBLiUJHC9UyMsBtFg11SMLcecI/pubchart?oid=746714274&amp;format=image"></iframe>
+					<h1>Supervised Music Separation</h1>
+
+					<h2>Discriminate vs. Generative</h2>
+
 				</section>
 
-				<section data-state="no-title-footer"  data-background-image="assets/ASY.svg" data-background-size="50%">
-					<h1>ASY: Asynchronous Recordings of Speech Mixtures</h1>
-					See the poster by Ryan Corey
-				</section>
+				<section>
+					<h1></h1>
+					<h2>Single I/O vs. Multiple I/O</h2>
 
+					<ul>
+						<li>Siamese networks</li>
+						<li>Chimera Networks</li>
+					</ul>
+
+
+					* Time Series vs. Frequency
+
+				</section>
 				<section data-state="no-title-footer"  data-background-image="assets/hero_header.svg" data-background-size="80%">
 					<h1>MUS</h1>
+				</section>
+
+				<section>
+					<section data-background-transition="none" data-state="no-title-footer"  data-background-image="assets/demotrack/mix.jpg">
+						<h1>Vocal Extraction</h1>
+					</section>
+					<section data-background-transition="none" data-state="no-title-footer"  data-background-image="assets/demotrack/vocals.jpg">
+						<h1>Vocal Extraction</h1>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-transition="none" data-state="no-title-footer"  data-background-image="assets/demotrack/mix.jpg">
+						<h1>Accompaniment Extraction</h1>
+					</section>
+					<section data-background-transition="none" data-state="no-title-footer"  data-background-image="assets/demotrack/accompaniment.jpg">
+						<h1>Accompaniment Extraction</h1>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-transition="none" data-state="no-title-footer"  data-background-image="assets/demotrack/mix.jpg">
+						<h1>Drums Extraction</h1>
+					</section>
+					<section data-background-transition="none" data-state="no-title-footer"  data-background-image="assets/demotrack/drums.jpg">
+						<h1>Drums Extraction</h1>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-transition="none" data-state="no-title-footer"  data-background-image="assets/demotrack/mix.jpg">
+						<h1>Bass Extraction</h1>
+					</section>
+					<section data-background-transition="none" data-state="no-title-footer"  data-background-image="assets/demotrack/bass.jpg">
+						<h1>Bass Extraction</h1>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-transition="none" data-state="no-title-footer"  data-background-image="assets/demotrack/mix.jpg">
+						<h1>Other Extraction</h1>
+					</section>
+					<section data-background-transition="none" data-state="no-title-footer"  data-background-image="assets/demotrack/other.jpg">
+						<h1>Other Extraction</h1>
+					</section>
+				</section>
+
+				<section>
+					<h1>DNN Approach</h1>
+					<img width='50%'  src="https://docs.google.com/drawings/d/e/2PACX-1vRXc_l4uNUTSOoAif8r4O-AKfAVBBMUSPVG_VMu79LjcZLb4xKLgFTVoSqVodvGetEvdeakfb4Nul-3/pub?w=720" alt="">
+					<ul>
+					</ul>
 				</section>
 
 				<section>
@@ -204,47 +312,6 @@ mus.run(my_function, estimates_dir="path/to/estimates")
 				</section>
 
 				<section>
-					<h1><i class="fab fa-python"></i> BSS eval v4: museval</h1>
-					<ul>
-						<li>Key issue for BSSEval v3: <b>speed</b>
-						<ul>
-							<li>Alignment of estimates and references with <i>matching filters</i></li>
-							<li>Frame-wise matching filters
-						</ul></li>
-						<li>In BSSEval v4 <i class="fab fa-python"></i>
-						<ul>
-							<li> Matching filters assumed <b>time-invariant</b> and computed <b>once</b></li>
-							<li> Trading memory for speed</li>
-							<li> 8 times faster than v3 with no significant difference</li>
-							<li> Exact compatibility with MATLAB for the --v3 mode</li>
-							<li> Scores saved in standardized JSON files</li>
-						</ul></li>
-					</ul>
-					<h2 style="font-family: monospace"><i class="fab fa-python"></i> museval</h2>
-
-					<aside class="notes">
-						some notes for the presenter
-					</aside>
-
-				</section>
-
-
-				<section>
-					<h1><i class="fab fa-github"></i> Sustainable Submission System</h1>
-
-					<ul>
-						<li>Automated open source system using Github </li>
-						<li>Collecting Objective Scores via Pull Requests</li>
-						<li>Using unit test to verify results using Travis CI</li>
-						<li>Allow participants to add references and descriptions</li>
-					</ul>
-					<aside class="notes">
-						some notes for the presenter
-					</aside>
-
-				</section>
-
-				<section>
 					<h1 style='font-size: 2.4em; margin-left: 1em; margin-top: 1em'>Objective Evaluation
 					</h1>
 					<ul>
@@ -253,73 +320,12 @@ mus.run(my_function, estimates_dir="path/to/estimates")
 					</ul>
 				</section>
 
-				<section>
-					<h2> Top Systems compared to last SiSECs </h2>
-					<iframe width="798.1132075471698" height="300.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4AO8QbngQBvthAy4J0iRDCPiiWvYLxYUBv-bK66_sBq88lESiDW5E_NrCiI1tmwvPVz1Q6-s1I9eR/pubchart?oid=818420137&amp;format=image"></iframe>
-					<ul>
-						<li> Before 2015: No systematic improvement for MUS</li>
-						<li> 2015: very challenging edition
-							<ul>
-								<li> From overfitted 3mn to larger scale 3.5h of test data</li>
-								<li> Vocals under-mixed in MSD100 (fixed for MUSDB18)</li>
-							</ul></li>
-						<li> 2016-2018: steady and systematic improvement</li>
-					</ul>
-					<aside class="notes">
-						<ul>
-							<li> I suggest you modify the figure to include a dashed-line between 2013 and 2015. On its left: 3mn data, on its right: 7.5 hours data.</li>
-							<li> You may modify the y-label for something more explicit, like "Average scores vs oracle (dB)"
-					</aside>
-				</section>
-
-			<section data-state="no-title-footer" data-background="#232323">
-				<h1 style='color:white; font-size: 2.4em; margin-top: 3em; margin-left: 1em'>
-					Is music separation </br>solved?
-				</h1>
-			</section>
-
-			<section data-state="no-title-footer" data-background="darkred">
-				<h1 style='color:white; font-size: 3.4em; margin-top: 2em;  margin-left: 1em'>Lets find out</br><i class="fa fa-volume-up"></i></h1>
-			</section>
-
-
-				<section>
-					<h1>Future Directions for audio separation research</h1>
-
-					Deep learning brought an important breakthrough in 3 years
-					<ul>
-						<li>Performance for music separation is getting close to oracles</br>
-								<i class="fa fa-long-arrow-alt-right"></i> Design new models (oracles) and/or new metrics ?</li>
-						<li> Is it more important to build better models or to get more data ?</br>
-							<i class="fa fa-long-arrow-alt-right"></i> Train with limited data</br>
-							<i class="fa fa-long-arrow-alt-right"></i> Evaluate models vs the amount of training data?</br>
-						</li>
-					</ul>
-
-					<aside class="notes">
-						some notes for the presenter
-					</aside>
-
+				<section data-state="no-title-footer" data-background="darkred">
+					<h1 style='color:white; font-size: 3.4em; margin-top: 2em;  margin-left: 1em'>DEMO</br><i class="fa fa-volume-up"></i></h1>
 				</section>
 
 				<section>
-					<h1>SiSEC Strategy</h1>
-
-					<ul>
-						<li>Only MUS was strongly developed in the recent years</br>
-								<i class="fa fa-long-arrow-alt-right"></i> Propose new tasks?</li>
-						<li> Audio is still the core topic of SiSEC</br>
-								<i class="fa fa-long-arrow-alt-right"></i> Are there other applicative domains for separation?</li>
-					</ul>
-
-					<aside class="notes">
-						some notes for the presenter
-					</aside>
-
-				</section>
-
-				<section>
-					<h1 style="margin-top:6em">Website: <a href="sisec18.unmix.app">sisec18.unmix.app</a></h1>
+					<h1 style="margin-top:6em">Website: <a href="https://sisec18.unmix.app">sisec18.unmix.app</a></h1>
 
 				</section>
 
@@ -327,7 +333,7 @@ mus.run(my_function, estimates_dir="path/to/estimates")
 			</div>
 			<div class='footer'>
 				<img src="css/theme/img/inria-bottom.svg" alt="Logo" />
-				<div id="middlebox">Signal Separation Evaluation Challenge 2018</div>
+				<div id="middlebox">Deep Learning for Music Unmixing</div>
 			</div>
 		</div>
 
